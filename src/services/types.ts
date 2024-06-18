@@ -46,6 +46,10 @@ export interface CreateUserAttrs {
 	password: string;
 }
 
+export type TCreateUserAttrs = {
+	username: string;
+	password: string;
+};
 export interface CreateBidAttrs {
 	itemId: string;
 	userId: string;

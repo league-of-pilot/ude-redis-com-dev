@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0.28
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_DATABASE=sqltest
+      - MYSQL_ROOT_PASSWORD=admin
+    ports:
+      - 3369:3306
+    volumes:
+      - ./temp:/var/lib/mysql
